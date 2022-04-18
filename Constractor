@@ -1,0 +1,41 @@
+package FirstDay;
+class Abc
+{
+int roomno=0;
+String roomtype="";
+String roomarea="";
+boolean acmachine=false;
+
+void setdata(int a,String b,String c,boolean d)
+{
+	this.roomno=a;
+	this.roomtype=b;
+roomarea=c;
+	this.acmachine=d;
+}
+void dispdata()
+{
+	System.out.println("Roomno is"+this.roomno);
+	System.out.println("roomtype is"+this.roomtype);
+	System.out.println("Roomarea is"+this.roomarea);
+	if (this.acmachine==true)
+	{
+		System.out.println("Acmachin is there"+ this.acmachine);
+	}
+	else
+	{
+		System.out.println("Acmachine is not there");
+	}
+}
+}
+public class Constra 
+{
+	public static  void main(String rags[])
+	{
+		System.out.println("Details attribute\n");
+		Abc s=new Abc();
+		s.setdata(45, "k88", "ff88", false);
+		s.dispdata();
+	}
+}
+
