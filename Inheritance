@@ -1,0 +1,47 @@
+ class Parent 
+{
+	int a;
+	Parent()
+	{
+		System.out.println("Parent class deffault constrator");
+	}
+	Parent(int a)
+	{
+		this.a=a;
+		System.out.println("Perent class is deffault constuctor KIET");
+	}
+	void disp()
+	{
+		System.out.println("A:"+a);
+	}
+}
+	class Child extends Parent
+	{
+		int b;
+		Child()
+		{
+			System.out.println("Child class is best class");
+		}
+		Child(int a,int b)
+		{
+			System.out.println("Child class perent class");
+			this.b=b;
+			this.a=(a);
+		}
+		void displ()
+		{
+			disp();	
+			System.out.println("B"+b);
+		}
+	}
+public class Inheritance
+{
+	public static void main(String[] args) 
+	{
+		Child c1=new Child();
+		c1.displ();
+		Child c2=new Child(10,12);
+		c2.disp();
+	}
+
+}
