@@ -1,0 +1,55 @@
+package kiet123;
+
+
+class Outer
+{
+	int outer_x;
+	inner i1;
+	Outer()
+	{
+	System.out.println("Outer class Constractor");
+	outer_x=10;
+	i1=new inner();
+	}
+	Outer(int p,int q)
+	{
+		outer_x=p;
+		i1=new inner(q);
+	}
+	void show()
+	{
+		i1.disp();
+		System.out.println(i1.inner_y);
+	}
+	class inner
+	{
+		int inner_y;
+		inner()
+		{
+		int	inner_y;
+			System.out.println("Inner class constructor called");
+		}
+		inner(int p)
+		{
+			inner_y=p;
+		}
+		void disp()
+		{
+			System.out.println("Outer_x"+outer_x+"Inner_y"+ inner_y);
+		}
+	}
+}
+
+public class InnerClass1 {
+
+	public static void main(String[] args) {
+		Outer o1=new Outer();
+		Outer o2=new Outer(1,2);
+		System.out.println("Object 1");
+		o1.show();
+		System.out.println("Obejct 2");
+		o2.show();
+
+	}
+
+}
