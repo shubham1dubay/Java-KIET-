@@ -1,0 +1,55 @@
+package Java;
+class try_catch
+{
+	int a,b;
+	int x[];
+	try_catch()
+	{
+		a=b=0;
+		x=new int [10];
+	}
+	try_catch(int a,int b)
+	{
+		this.a=a;
+		this.b=b;
+	}
+	void fun()
+
+{
+try 
+	{
+	int i=0;
+	System.out.println("OuterTry");
+	for(i=0;i<=9;i++)
+		x[i]=i+1;
+	try
+	{
+		for(i=0;i<=9;i++)
+		{
+			System.out.println(x[i]/b);
+		}	
+	}
+	catch(ArithmeticException e)
+	{
+		System.out.println(e.toString());
+	}
+	}
+	catch(ArrayIndexOutOfBoundsException e)
+	{
+		System.out.println(e.toString());
+	}
+	
+}
+}
+public class NestedTry {
+
+	public static void main(String[] args) {
+		exc ob1=new exc(20,0);
+		exc Ob2=new exc(20,0);
+		ob1.fun();
+		Ob2.fun();
+
+	}
+
+}
+
