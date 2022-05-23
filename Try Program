@@ -1,0 +1,38 @@
+package Java;
+class exc
+{
+int a,b;
+exc(){
+	a=b=0;	
+}
+exc(int a,int b)
+{
+	this.a=a;
+	this.b=b;
+}
+
+void fun()
+{
+	try
+	{
+		int c=a/b;
+		{
+			System.out.println("Will not println");
+		}
+	}catch(ArithmeticException e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
+}
+
+public class Try {
+
+	public static void main(String[] args)
+	{
+		exc ob1=new exc(20,0);
+		exc ob2=new exc(20,0);
+		ob1.fun();
+		ob2.fun();
+	}
+}
