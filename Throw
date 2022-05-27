@@ -1,0 +1,34 @@
+package Java1;
+
+class exc
+{
+	void fun()
+	{
+		try
+		{
+			throw new NullPointerException();
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Exception thorw");
+			throw e;
+		}
+	}
+}
+public class Throw {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		exc ab=new exc();
+		try
+		{
+			ab.fun();
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Exception handling");
+		}
+	}
+
+}
