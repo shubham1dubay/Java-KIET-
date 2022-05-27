@@ -1,0 +1,48 @@
+package Java1;
+class Nt  extends Thread
+{
+	
+	Nt(String Name)
+	{
+		super(Name);
+	}
+	public void run()
+	{
+		try
+		{
+			for(int i=5;i>0;i--)
+			{
+				System.out.println(i);
+				Thread.sleep(500);
+			}
+		}
+			catch(InterruptedException e)
+			{
+				System.out.println(e);
+			}
+		}
+	
+	
+}
+public class Multi_thread {
+
+	public static void main(String[] args) 
+	{
+		Nt sk=new Nt("Thread");
+		sk.start();
+		try
+		{
+			for(int i=0;i>0;i--)
+			{
+				System.out.println("MatheadThread"+i);
+				Thread.sleep(100);
+			}
+		}
+		catch(InterruptedException e)
+		{
+			System.out.println(e);
+		}
+
+	}
+
+}
